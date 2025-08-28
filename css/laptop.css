@@ -1,0 +1,9 @@
+@charset "utf-8";
+@media (min-width: 992px) {
+  .site-container {
+    padding: 32px;
+  }
+  .hero-title {
+    font-size: 40px;
+  }
+}

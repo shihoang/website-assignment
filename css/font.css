@@ -1,0 +1,34 @@
+@charset "utf-8";
+:root { --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+html { box-sizing: border-box; } *, *::before, *::after { box-sizing: inherit; }
+body { margin:0; font-family: var(--font-sans); line-height:1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+img { max-width:100%; height:auto; display:block; }
+a { text-decoration:none; color:inherit; }
+
+/* Footer icons responsive & centered */
+#footer .footer-icon { display:inline-block; margin:0 8px; color:#fff; }
+#footer .footer-icon i { font-size:3vw; }
+@media (max-width: 575.98px) { #footer .footer-icon i { font-size:20px; } }
+@media (min-width: 1200px) { #footer .footer-icon i { font-size:28px; } }
+
+/* --- Toggle visibility & error text --- */
+.hide { display: none !important; }
+.form-error { color: #dc3545; font-size: 0.9rem; margin-top: .25rem; }
+
+/* --- Skill card hover toggle --- */
+.skill-card { position: relative; }
+.skill-toggle {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease-in-out;
+}
+.skill-card:hover .skill-toggle,
+.skill-card:focus-within .skill-toggle {
+  opacity: 1;
+  pointer-events: auto;
+}
+.skill-header { cursor: pointer; }
+.skill-body { padding: 8px 0 0; }

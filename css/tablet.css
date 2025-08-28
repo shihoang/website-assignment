@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* =========================================== */
+/* TABLET STYLES: 768px to 1199.98px */
+/* This range covers standard tablets in both portrait and landscape,
+   including iPad Pro 11-inch (portrait & landscape) and iPad Pro 12.9-inch (portrait). */
+/* =========================================== */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  /* GLOBAL & BASE STYLES FOR TABLET */
+  section {
+    padding: 40px 0; /* Slightly reduce vertical padding for sections on tablet */
+  }
+
+  /* =========================================== */
+  /* NAVIGATION BAR */
+  /* =========================================== */
+  #name-nav {
+    display: none !important; /* Hide name in nav for tablet to save space */
+  }
+  nav.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribute items evenly */
+    gap: 10px; /* Slightly reduce gap between nav links */
+    padding: 0 15px; /* Add horizontal padding for nav container */
+  }
+  nav.container > a {
+    white-space: nowrap; /* Prevent nav links from wrapping */
+    padding: 8px 12px; /* Adjust padding for nav links */
+    font-size: 15px; /* Slightly reduce font size if needed */
+  }
+  nav.container > a i {
+    font-size: 16px; /* Adjust icon size */
+  }
+
+  /* =========================================== */
+  /* ABOUT SECTION */
+  /* =========================================== */
+  #about .about-grid {
+    grid-template-columns: 1fr 1fr; /* Keep 2 columns for target and personal info */
+    gap: 20px; /* Adjust gap between columns */
+    padding: 0 15px; /* Add horizontal padding for consistency */
+  }
+  #about .section-title {
+    font-size: 28px; /* Slightly smaller section title */
+    margin-bottom: 25px;
+  }
+  /* Smaller titles inside the about boxes */
+  #about #target .section-title,
+  #about #email-gate .section-title,
+  #about #personal-info .section-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  #personal-info .info li span:first-child {
+    min-width: 80px; /* Adjust fixed width for labels to align colons if needed */
+  }
+  /* Remove margin-top on first items if grid handles it */
+  #target,
+  #email-gate,
+  #personal-info {
+    margin-top: 0;
+  }
+
+  /* =========================================== */
+  /* JOB INFO SECTION (SKILL / JOB CARDS) */
+  /* =========================================== */
+  #job-info .job-info-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 COLUMNS FOR JOB/SKILL CARDS */
+    gap: 20px; /* Adjust gap for tablet layout */
+    padding: 0 15px; /* Add horizontal padding for consistency */
+  }
+
+  /* Adjustments for hobby items to fit better in 2 columns */
+  .hobbies {
+    gap: 15px; /* Slightly reduce gap between hobby items */
+  }
+  .hobby-item {
+    flex-basis: 75px; /* Adjust base width for hobby items */
+  }
+  .hobby-item i {
+    width: 55px;
+    height: 55px;
+    font-size: 26px;
+  }
+  .hobby-item p {
+    font-size: 13px; /* Slightly smaller text for hobbies */
+  }
+  .progress-bar {
+    margin-bottom: 10px; /* Reduce space below progress bars */
+  }
+
+  /* =========================================== */
+  /* CERTIFICATE SECTION */
+  /* =========================================== */
+  #certificate .certificate-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 COLUMNS FOR CERTIFICATES */
+    gap: 20px; /* Adjust gap for tablet */
+    padding: 0 15px; /* Add horizontal padding for consistency */
+  }
+  #certificate img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  .certificate-item .certificate-content {
+    padding: 15px; /* Adjust padding inside certificate content */
+  }
+  .certificate-item .certificate-content h4 {
+    font-size: 16px; /* Smaller certificate title */
+  }
+
+  /* =========================================== */
+  /* PROJECT SECTION */
+  /* =========================================== */
+  #project .project-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 COLUMNS FOR PROJECTS */
+    gap: 20px; /* Adjust gap for tablet */
+    padding: 0 15px; /* Add horizontal padding for consistency */
+  }
+  #project img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  #project .project-title {
+    font-size: 18px; /* Adjust project title size */
+    padding: 12px 15px; /* Adjust padding */
+  }
+  #project .project-info {
+    padding: 12px 15px; /* Adjust padding */
+  }
+  #project .project-info span {
+    font-size: 12px; /* Smaller font for info tags */
+    padding: 3px 6px;
+  }
+  #project .project-item table td {
+    padding: 8px 15px; /* Adjust table padding */
+    font-size: 13px;
+  }
+  #project .project-item table tr td:first-child {
+    width: 70px; /* Adjust fixed width for labels in project table */
+  }
+
+  /* =========================================== */
+  /* FOOTER SECTION */
+  /* =========================================== */
+  #footer .footer-content {
+    gap: 20px; /* Adjust gap for footer links */
+  }
+  #footer .footer-content a {
+    font-size: 15px;
+  }
+  #footer .footer-content a i {
+    font-size: 20px;
+  }
+}
